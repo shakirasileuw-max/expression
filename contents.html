@@ -23,35 +23,33 @@
             margin: 30px auto;
             padding: 20px;
         }
-        /* Grid for the 4 emotion types */
         .emotion-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
         .emotion-card {
             background: #ffffff;
             border-radius: 10px;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             border-top: 5px solid #2c3e50;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Fixed height for images to keep cards uniform */
+        .emotion-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover; /* This crops the image to fit perfectly */
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
         .emotion-card h3 {
-            margin-top: 0;
+            margin: 10px 0;
             color: #2c3e50;
-        }
-        .img-placeholder {
-            background: #e1e8ed;
-            height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            color: #777;
         }
         .stats {
             font-size: 0.9rem;
@@ -59,6 +57,7 @@
             background: #f9f9f9;
             padding: 10px;
             border-radius: 5px;
+            margin-top: auto; /* Pushes stats to the bottom */
         }
         .navigation {
             display: flex;
@@ -85,8 +84,9 @@
         <p>Explore how different emotions are expressed through specific musical elements like tempo and key.</p>
 
         <div class="emotion-grid">
+            <!-- Happiness -->
             <div class="emotion-card">
-               <img src="https://i.pinimg.com/736x/ad/ca/e3/adcae35e1de1e763ecfa8f8feb9160ce.jpg" alt="Happiness description" style="width:100%; height:auto; border-radius:8px;">
+                <img src="https://images.unsplash.com/photo-1517230878791-4d28214057c2?w=400" alt="Happiness">
                 <h3>Happiness</h3>
                 <div class="stats">
                     • <strong>Tempo:</strong> Fast<br>
@@ -94,8 +94,9 @@
                 </div>
             </div>
 
+            <!-- Sadness -->
             <div class="emotion-card">
-                <img src="https://i.pinimg.com/736x/9c/ac/ae/9cacaeb501a3789eb2eef7f8461c96bb.jpg" alt="Happiness description" style="width:100%; height:auto; border-radius:8px;">
+                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400" alt="Sadness">
                 <h3>Sadness</h3>
                 <div class="stats">
                     • <strong>Tempo:</strong> Slow<br>
@@ -103,8 +104,9 @@
                 </div>
             </div>
 
+            <!-- Anger -->
             <div class="emotion-card">
-               <img src="https://i.pinimg.com/736x/99/fb/e6/99fbe63533c143c0347fdc177bf5061a.jpg" alt="Happiness description" style="width:100%; height:auto; border-radius:8px;">
+                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400" alt="Anger">
                 <h3>Anger</h3>
                 <div class="stats">
                     • <strong>Sound:</strong> Loud<br>
@@ -112,8 +114,9 @@
                 </div>
             </div>
 
+            <!-- Calm -->
             <div class="emotion-card">
-                <img src="https://i.pinimg.com/736x/6d/de/c9/6ddec9ebeccb3fd1b9ac6a5f1251cb23.jpg" alt="Happiness description" style="width:100%; height:auto; border-radius:8px;">
+                <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?w=400" alt="Calm">
                 <h3>Calm</h3>
                 <div class="stats">
                     • <strong>Melody:</strong> Soft<br>
