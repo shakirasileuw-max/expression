@@ -9,8 +9,8 @@
         body, html {
             height: 100%;
             margin: 0;
-            font-family: 'Georgia', serif; /* Classic, elegant feel for music */
-            background-color: #f0f7f9; /* Light blue tint matching your map */
+            font-family: 'Georgia', serif;
+            background-color: #f0f7f9;
             color: #2c3e50;
         }
 
@@ -39,11 +39,12 @@
             font-size: 1.2rem;
             margin-bottom: 30px;
             color: #555;
+            min-height: 1.5em; /* Keeps layout steady while name loads */
         }
 
-        /* Navigation Button (Based on your arrow map) */
+        /* Navigation Button */
         .start-btn {
-            background-color: #2c3e50; /* Dark blue from your map arrows */
+            background-color: #2c3e50;
             color: white;
             padding: 15px 40px;
             text-decoration: none;
@@ -54,13 +55,11 @@
             align-items: center;
             gap: 10px;
         }
-
         .start-btn:hover {
             background-color: #1a252f;
             transform: scale(1.05);
         }
 
-        /* Simple icon style */
         .icon {
             font-size: 1.5rem;
         }
@@ -72,12 +71,24 @@
         <div class="icon">🏠</div>
         
         <h1>Music as Emotional Expression</h1>
-        <p class="subtitle">Exploring the universal language of the soul.</p>
+        <!-- We gave this an ID so JavaScript can find it and change the text -->
+        <p class="subtitle" id="welcome-text">Exploring the universal language of the soul.</p>
 
         <a href="purpose.html" class="start-btn">
             Begin Journey <span>➔</span>
         </a>
     </div>
+
+    <script>
+        // Use a pop-up (prompt) to get the user's name
+        let userName = prompt("Welcome! What is your name?");
+
+        // If the user entered a name, customize the welcome message
+        if (userName !== null && userName !== "") {
+            document.getElementById("welcome-text").innerText = 
+                "Welcome, " + userName + "! Exploring the universal language of the soul.";
+        }
+    </script>
 
 </body>
 </html>
